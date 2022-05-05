@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>chess</title>
+    <style>
+      td {
+        width: 50px;
+        height: 50px;
+      }
+
+      table {
+        width: 60%;
+        height: 60%;
+      }
+
+      tr:nth-child(odd) td:nth-child(even),
+      tr:nth-child(even) td:nth-child(odd) {
+        background-color: black;
+      }
+      tr:nth-child(odd) td:nth-child(odd),
+      tr:nth-child(even) td:nth-child(even) {
+        background-color: #ccc;
+      }
+      button{
+        width: 100px;height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="chess">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+   
+  </body>
+  <script>
+    $(function create() {
+      var $gameboard = $("#chess");
+      var $cells = $gameboard.find("td");
+
+      var adjustHeight = function () {
+        var width = $cells.width();
+        $cells.height(width);
+      };
+
+      $(window).resize(function () {
+        adjustHeight();
+      });
+      adjustHeight();
+    });
+  </script>
+  <div>
+    <!-- <input type="button" id="myInput" value="Input Text" /> -->
+    <button style="background-color: red;" type="button" id="myButton" class="btn">Abhay</button>
+  <script>
+   $('.btn').click(function(){
+    var $this = $(this);
+    $this.toggleClass('btn');
+    if($this.hasClass('btn')){
+        $this.text('shukla');         
+    } else {
+        $this.text('kanpur');
+    }
+});
+  </script>
+  </div>
+
+ <div>
+   <br>
+   <h6>click on button and see their classes in console</h6>
+   <button id="a" class="apple">Apple</button>
+   <button id="b" class="nokia">nokia</button>
+   <button id="c" class="samsung">samsung</button>
+   <button id="d" class="oneplus">oneplus</button>
+
+ </div>
+<div class="clss">
+<script>
+    $(document).ready(function () {
+            $("#a").click(function () {
+                var getClass = this.className;
+                console.log(getClass);
+            });
+            $("#b").click(function () {
+                var getClass = this.className;
+                console.log(getClass);
+            });
+            $("#c").click(function () {
+                var getClass = this.className;
+                console.log(getClass);
+            });
+            $("#d").click(function () {
+                var getClass = this.className;
+                console.log(getClass);
+            });
+        });
+  </script>
+</div>
+
+<div class="drop">
+  <select name="pg_dropdown" id="pg_dropdown">
+    <option value="cedcoss">CedCoss</option>
+    <option value="cedcommerce">CedCommerce</option>
+    <option value="makeweb" selected="selected">MakewebBetter</option>
+    </select>
+    
+    <div id="add">Add</div>
+    
+    <input type="text" name="pg_input" id="pg_input" />
+    <script>
+       $(document).ready(function(){
+    $('#add').click(function() {
+        var program = $("#pg_dropdown").val(); //get value of selected option
+        var programs = $('#pg_input').val().split(",");
+        if (programs[0] == "") {
+            programs.pop()
+        }
+
+        if ($.inArray(program, programs) == -1) {
+            programs.push(program);
+        }
+
+        $('#pg_input').val(programs.join(',')); //add to text input
+    }); 
+});
+    </script>
+    <p>hello everyone</p>
+    <button id="xyz">click me</button>
+
+    <script>
+      function touch(){
+        $("p").css({
+          "background-color":"green",
+          "color":"white",
+          "font-size":"25px",
+          "padding":"15px"
+        });
+      }
+      $("#xyz").click(touch);
+    </script>
+</div>
+<div id="second">
+    <form>
+        <input type="checkbox" name="color" value="Bike" />Red
+        <input type="checkbox" name="color" value="Car" />Green
+        <input type="checkbox" name="color" value="Car" />Blue
+        <input type="checkbox" name="color" value="Car" />Black
+      </form>
+      <p></p>
+  
+      <script>
+        var count_Checked = function () {
+          var n = $("input:checked").length;
+          $("p").text(n + (n === 1 ? " is" : " are") + " checked.");
+        };
+        count_Checked();
+        $("input[type=checkbox]").on("click", count_Checked);
+      </script>
+  
+      <div class="test" style="border: 2px;">
+        <h1>friends</h1>
+        <p>Hi Abhay</p>
+        <button>Hello</button>
+        <input type="text" placeholder="do something great" />
+      </div>
+      <button id="emt">empty me</button>
+      <script>
+        function clear(){
+          $(".test").empty()
+        }
+        $("#emt").click(clear);
+      </script>
+  
+      <div class="demo">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione qui at cumque, molestiae quo dicta laudantium fuga officia nemo unde! Obcaecati commodi mollitia molestias aut deleniti animi maxime, dolor vitae.</p>
+        <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam, nam.</h1>
+        <table>
+          <tr><th>lorem</th><th>emdldak</th><th>dasdadj</th><th>jfsjfslkfjs</th></tr>
+          <td>fdffd</td><td>fdffd</td><td>fdffd</td><td>fdffd</td><td>fdffd</td>
+        </table>
+        <button id="demoemt">demo empty me</button>
+        <script>
+          function clear(){
+          $(".demo").empty()
+        }
+        $("#demoemt").click(clear);
+        </script>
+      </div>
+      <div id="div1">This is some text.</div>
+      <div id="div2">This is some text.</div>
+      <br />
+  
+      <button>Add classes to first div element</button>
+      <script>
+        $(document).ready(function () {
+          $("button").click(function () {
+            $("#div1").addClass("important blue");
+          });
+        });
+      </script>
+      <br>
+  
+  <div class="tab">
+    <table id="table" style="background-color: aqua; color: white;">
+      <tr id="tr1">
+        <th class="th">Company</th>
+        <th class="th">Contact</th>
+        <th class="th">Country</th>
+      </tr>
+      <tr id="tr2" style="background-color: white;">
+        <td class="td">HUL</td>
+        <td class="td">Ashish</td>
+        <td class="td">British</td>
+      </tr>
+      <tr id="tr3">
+        <td class="td">Reliance</td>
+        <td class="td">Ravi</td>
+        <td class="td">India</td>
+      </tr>
+      <tr id="tr4">
+        <td class="td">Colgate</td>
+        <td class="td">Sushil</td>
+        <td class="td">Saudi</td>
+      </tr>
+      <tr id="tr5">
+        <td class="td">Sagar</td>
+        <td class="td">Anoop</td>
+        <td class="td">MP</td>
+      </tr>
+      <tr id="tr6">
+        <td class="td">Proprofs</td>
+        <td class="td">Annu</td>
+        <td class="td">London</td>
+      </tr>
+      <tr id="tr7">
+        <td class="td">ABB Limited</td>
+        <td class="td">Giovanni Rovelli</td>
+        <td class="td">Italy</td>
+      </tr>
+    </table>
+    <button id="removesome">CLICK TO REMOVE TABLE</button>
+    <button id="removerow">Remove Row</button>
+  <script>
+  
+  
+    $("#removerow").click(specific);
+    function specific(){
+      console.log("Inside remove");
+      $("#tr6").remove();
+    }
+  
+    function tableaction() {
+      $("#tr3").remove();
+      $("#tr4").remove();
+      $("#tr5").remove();
+      $("#tr6").remove();
+      $("#tr7").remove();
+    }
+    $("#removesome").click(tableaction);
+  
+    </script>
+    </div>
+</div>
+</html>
